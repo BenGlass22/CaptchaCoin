@@ -1,11 +1,12 @@
 ////// ETHEREUM SETUP //////
 ethereum.autoRefreshOnNetworkChange = false;
 window.ethereum.enable();
+
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 const signer = provider.getSigner();
 
 // swap this address out with the contract address for your token (found in Remix after deploying)
-const contractAddress = "0x5107cAceeF5C2b78e8d5A2410F6fc172C362b9af"; // swap out with your address
+const contractAddress = "0x9f5d171a250f3516c368FddE45aEC837E1d51ab8"; // swap out with your address
 const contractABI = [
   "function name() public view returns (string memory)",
   "function symbol() public view returns (string memory)",
@@ -31,6 +32,15 @@ const tokenWithSigner = contract.connect(signer);
 
 $('#button').click(function(){
 
-  tokenWithSigner.mint(numTokens);
+  // when I wrote this out as pseudo code for you, I forgot to include actually declaring what numTokens was.
+  // Once I fixed the library stuff in your html, and got jQuery working, I saw the error about numTokens.
+
+  const NUM_TOKENS = 1  // change this to whatever.
+
+  tokenWithSigner.mint(NUM_TOKENS);
+
+  setTimeout(function(){
+    window.location.href=window.location.href;
+  }, 1000)
 })
 

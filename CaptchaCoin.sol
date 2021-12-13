@@ -71,7 +71,7 @@ contract CaptchaCoin is ERC20 {
 
     // this function allows the original creator of this contract to
     // mint more tokens and increase the supply
-    function mint(address to, uint256 amount) external {
+    function mint(uint256 amount) external {
         require(!isFixedSupply, 'fixed supply, cannot mint more');
         _mint(msg.sender, amount * 10 ** decimals());
     }
