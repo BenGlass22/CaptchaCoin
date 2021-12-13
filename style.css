@@ -1,0 +1,77 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  padding: 50px;
+}
+
+canvas {
+  display: block;
+}
+p{
+  font-size:x-large;
+  line-height: 60px;
+}
+
+#sketch-parent{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+#logo{
+  width: 50%;
+  width: 200px;
+  height: 200px;
+}
+#sub-logo{
+  width: 50%;
+  width: 350px;
+  height: 350px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#wee-logo{
+  width: 50%;
+  width: 100px;
+  height: 100px;
+}
+nav {
+  display: flex;
+  position:fixed;
+  top:0;
+  left: 0;
+  width:100%;
+  z-index:100;
+  height: 100px;
+  font-size: x-large;
+  color: black;
+  background-color: white;
+  }
+
+
+  #old{
+    width: 00px;
+    height: 500px;
+    align-self: center;
+  }
+
+  div{
+    width: 100%;
+    height:500px;
+    left: 0;
+  }
+
+  #div2 {
+    width: 100%;
+    height: 300px;
+   
+  }
+
+  #div3{
+  align-content: center;
+  }
+
+  #button{
+    outline-color: blue;
+  }
